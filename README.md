@@ -6,7 +6,11 @@ Il risultato finale era quello di realizzare un conteggio prevedendo 3 oggetti T
 
 Il primo scatta ogni ms o conta fino a 5000, il secondo scatta ogni 10 ms e conta fino a 500 mentre l'ultimo scatta ogni 100 ms e conta fino a 50. Ogni contatore dura 5 secondi.
 
-Per far partire i trce contatori deve essere prensente un pulsante Start che rimanga disattivato fino alla fine dei conteggi. 
+Contemporaneamente a questi 3 conteggi ce ne deve essere un quarto che tenga conto del conteggio finale.
+
+Per far partire i threads contatori deve essere prensente un pulsante Start che rimanga disattivato fino alla fine dei conteggi.
+
+L'ultimo punto (opzionle) era quello di far visualizzare il conteggio finale tramite una ProgressBar
 
 
 ### Codice che utilizza il costrutto lock e il metodo Dispatcher.invoke
