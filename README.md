@@ -17,16 +17,16 @@ L'ultimo punto (opzionle) era quello di far visualizzare il conteggio finale tra
 
 ![cattura](/images/Cattura1.PNG)
 
-Creando “incrementa2” abbiamo creato un altro processo che conta ed è indipendente dall’altro.
+Creando “incrementa2” abbiamo creato un altro processo che contatore indipendente dall’altro. In modo tale da non interferire con l'altro conteggio
 
 ### Metodi del semaforo
 
 Il semaforo non può essere assolutamente negativo; esso può avere 2 funzioni: 
 
 
-![cattura](/images/Cattura2.PNG)   signal() ⇒ (decrementa il contatore e quando arriva a 0 si ferma)
+![cattura](/images/Cattura2.PNG)   signal() ⇒ La funzione signal viene utilizzata per rilasciare il controllo del semaforo. Quando un processo o thread ha finito di utilizzare la risorsa condivisa, invoca la funzione signal per incrementare il valore del semaforo. Questo permette ad altri processi o thread in attesa di acquisire il controllo del semaforo e accedere alla risorsa condivisa.
 
-![cattura](/images/Cattura3.PNG)   wait() ⇒ (è una procedura bloccante)
+![cattura](/images/Cattura3.PNG)   wait() ⇒ La funzione wait viene utilizzata per acquisire il controllo del semaforo. Se il valore del semaforo è maggiore di zero, il processo o thread può accedere alla risorsa condivisa e decrementare il valore del semaforo. Altrimenti, il processo o thread viene messo in attesa finché il valore del semaforo non diventa maggiore di zero. In pratica, il processo o thread che invoca la funzione wait viene bloccato fino a quando il semaforo non diventa disponibile.
 
 ### Codice per inizializare un semaforo
 
